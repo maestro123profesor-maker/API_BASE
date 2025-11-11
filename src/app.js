@@ -4,8 +4,6 @@ import { corsMiddleware } from './core/middlewares/cors.js'
 import { errorHandlerMiddleware } from './core/middlewares/errorHandler.js';
 
 import { authRouter } from './modules/auth/auth.routes.js'
-import { ejemploRouter } from './modules/ejemplo/ejemplo.routes.js'
-
 
 const app = express()
 app.use(json())
@@ -14,7 +12,6 @@ app.use(corsMiddleware())
 app.disable('x-powered-by')
 
 app.use('/auth', authRouter())
-app.use('/ejemplo', ejemploRouter())
 
 app.use(errorHandlerMiddleware);
 

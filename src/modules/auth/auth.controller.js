@@ -18,7 +18,9 @@ export class AuthController {
       .cookie('access_token', user.token , {httpOnly: process.env.HTTP_ONLY, sameSite: process.env.SAME_SITE, maxAge: process.env.MAX_AGE})
       .status(201).json({
         status: "success", 
-        user: user.user
+        user: user.user, 
+        token: user.token, 
+        menu: user.menu
       })
     } catch (error) {
       next(error);

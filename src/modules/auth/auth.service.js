@@ -15,7 +15,8 @@ export class AuthService {
 
     const { password: _, ...publicUser} = user
     const token = jwt.sign({publicUser}, process.env.JWT_SECRET, { expiresIn : process.env.JWT_EXPIRES })
-    return {user: publicUser, token: token }
+    
+    return {user: publicUser, token: token}
 
   }
 

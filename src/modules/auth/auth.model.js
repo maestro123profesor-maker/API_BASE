@@ -52,7 +52,7 @@ export class AuthModel {
   static async crearUsuario ({ usuario, password, nombre, role}){
 
     const uuid = crypto.randomUUID()
-    const hashedPassword = await bcrypt.hash(password, process.env.SALT_ROUNDS)     
+    const hashedPassword = await bcrypt.hash(password, 10)     
     const conn = await getConnection();
 
     try { 
