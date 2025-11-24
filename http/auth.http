@@ -6,9 +6,9 @@ POST {{baseUrl}}/auth/register
 Content-Type: application/json
 
 {
-    "usuario":"ulises",
+    "usuario":"user",
     "password":"123",
-    "nombre":"omar",
+    "nombre":"user",
     "role":"1"
 }
 
@@ -17,6 +17,6 @@ POST {{baseUrl}}/auth/login
 Content-Type: application/json
 
 {
-    "usuario":"ulises",
+    "usuario":"user",
     "password":"123"
 }
